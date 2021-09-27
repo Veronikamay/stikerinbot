@@ -25,6 +25,7 @@ let tags = {
 const defaultMenu = {
   before: `
 *┌────*
+*├♕Bot sky♕*
 *├ %name*
 *│* Hari: %week %weton
 *│* Tanggal: %date
