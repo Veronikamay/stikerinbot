@@ -2,7 +2,6 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': '🔅Main',
   'topupgame': '🎮TOPUP MURAH🎮',
   'game': '🔅Game',
   'sticker': '🔅Sticker',
