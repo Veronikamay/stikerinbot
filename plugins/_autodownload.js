@@ -20,7 +20,7 @@ handler.all = async function (m, { isPrems }) {
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.nowm, '', '© stikerin', m)
+        await this.sendFile(m.chat, json.nowm, '', 'download selesai jangan, lupa\njoin channel telegramn\https://t.me/whatsappbot1', m)
     }
 
     if (/^.*cocofun/i.test(m.text)) {
@@ -29,7 +29,7 @@ handler.all = async function (m, { isPrems }) {
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.download, '', '© stikerin', m)
+        await this.sendFile(m.chat, json.download, '', 'download selesai, jangan lupa\njoin channel telegramn\https://t.me/whatsappbot1', m)
     }
 
     if (/^.*(fb.watch|facebook.com)/i.test(m.text)) {
@@ -47,7 +47,7 @@ handler.all = async function (m, { isPrems }) {
             let json = JSON.parse(igdl)
             await m.reply(wait)
             for (let { downloadUrl, type } of json) {
-                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), '© stikerin', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
+                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'download selesai, jangan lupa\njoin channel telegramn\https://t.me/whatsappbot1', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
             }
         }).catch(_ => _)
     }
@@ -59,7 +59,7 @@ handler.all = async function (m, { isPrems }) {
             if (!json.status) return m.reply(eror)
             await m.reply(wait)
             m.reply(util.format(json))
-            await this.sendFile(m.chat, json.data.url, '', '© stikerin', m)
+            await this.sendFile(m.chat, json.data.url, '', 'download selesai, jangan lupa\njoin channel telegramn\https://t.me/whatsappbot1', m)
         }).catch(_ => _)
     }
 
@@ -67,10 +67,10 @@ handler.all = async function (m, { isPrems }) {
         twitter(url).then(async res => {
             let twit = JSON.stringify(res)
             let json = JSON.parse(twit)
-            let pesan = json.data.map((v) => `Link: ${v.url}`).join('\n------------\n')
+            let pesan = json.data.map((v) => `kalau download video dari twitter akan ada 3 video pilih salah satu, semakin besar mbnya maka semakin bagus kualitas videonya')
             await m.reply(wait)
             for (let { url } of json.data) {
-                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), '© stikerin', m)
+                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), 'download selesai jangan lupa\njoin channel telegramn\https://t.me/whatsappbot1', m)
             }
         }).catch(_ => _)
     }
