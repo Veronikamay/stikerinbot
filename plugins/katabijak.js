@@ -36,7 +36,7 @@ let handler = async (m, { command, args, usedPrefix }) => {
     }
 }
 handler.help = ['katabijak'].map(v => v + ' <opsi>')
-handler.tags = ['internet']
+handler.tags = ['quotes']
 handler.command = /^(katabijak|jagokata)$/i
 
 module.exports = handler
