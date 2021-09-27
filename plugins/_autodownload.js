@@ -12,71 +12,70 @@ handler.all = async function (m, { isPrems }) {
     if (db.data.users[m.sender].banned) return
     if (db.data.chats[m.chat].isBanned) return
 
-    let url = m.text.split(/\n| /i)[0]
-
     if (/^.*tiktok/i.test(m.text)) {
-        let res = await fetch(API('hardianto', '/api/download/tiktok', { url }, 'apikey'))
+        let res = await fetch(API('hardianto', '/api/download/tiktok', { url: m.text.split(/\n| /i)[0] }, 'apikey'))
         if (!res.ok) return m.reply(eror)
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.nowm, '', 'download selesai jangan\, lupa\njoin channel telegramn\@whatsappbot1', m)
+        await this.sendFile(m.chat, json.nowm, '', 'bot auto download', m)
     }
 
     if (/^.*cocofun/i.test(m.text)) {
-        let res = await fetch(API('jojo', '/api/cocofun-no-wm', { url }))
+        let res = await fetch(API('jojo', '/api/cocofun-no-wm', { url: m.text.split(/\n| /i)[0] }))
         if (!res.ok) return m.reply(eror)
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.download, '', 'download selesai\, jangan lupa\njoin channel telegramn\@whatsappbot1', m)
+        await this.sendFile(m.chat, json.download, '', 'bot auto download', m)
     }
 
     if (/^.*(fb.watch|facebook.com)/i.test(m.text)) {
-        let res = await fetch(API('neoxr', '/api/download/fb', { url }, 'apikey'))
-        if (!res.ok) return m.reply(eror)
-        let json = await res.json()
-        if (!json.status) return m.reply(util.format(json))
-        await m.reply(wait)
-        await conn.sendFile(m.chat, json.data.sd.url, '', `HD: ${json.data.hd.url}\nUkuran: ${json.data.hd.size}\n\n© stikerin`, m)
+        facebook(m.text.split(/\n| /i)[0]).then(async res => {
+            let fb = JSON.stringify(res)
+            let json = JSON.parse(fb)
+            if (!json.status) throw json
+            await m.reply(wait)
+            // m.reply(util.format(json))
+            await this.sendFile(m.chat, json.data[1].url ? json.data[1].url : json.data[0].url, '', '© stikerin', m)
+        }).catch(_ => _)
     }
 
     if (/^.*instagram.com\/(p|reel|tv)/i.test(m.text)) {
-        igdl(url).then(async res => {
+        igdl(m.text.split(/\n| /i)[0]).then(async res => {
             let igdl = JSON.stringify(res)
             let json = JSON.parse(igdl)
             await m.reply(wait)
             for (let { downloadUrl, type } of json) {
-                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'download selesai\, jangan lupa\njoin channel telegramn\@whatsappbot1', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
+                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'bot autodownload semakin besar mbnya semakin bagus videonya', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
             }
         }).catch(_ => _)
     }
 
     if (/^.*(pinterest.com\/pin|pin.it)/i.test(m.text)) {
-        pin(url).then(async res => {
+        pin(m.text.split(/\n| /i)[0]).then(async res => {
             let pin = JSON.stringify(res)
             let json = JSON.parse(pin)
             if (!json.status) return m.reply(eror)
             await m.reply(wait)
             m.reply(util.format(json))
-            await this.sendFile(m.chat, json.data.url, '', 'download selesai\, jangan lupa\njoin channel telegramn\@whatsappbot1', m)
+            await this.sendFile(m.chat, json.data.url, '', 'bot auto download', m)
         }).catch(_ => _)
     }
 
     if (/^.*twitter.com\//i.test(m.text)) {
-        twitter(url).then(async res => {
+        twitter(m.text.split(/\n| /i)[0]).then(async res => {
             let twit = JSON.stringify(res)
             let json = JSON.parse(twit)
-            let pesan = json.data.map((v) => `kalau download video dari twitter akan ada 3 video pilih salah satu semakin besar mbnya maka semakin bagus kualitas videonya')
             await m.reply(wait)
             for (let { url } of json.data) {
-                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), 'download selesai jangan lupa\njoin channel telegramn\@whatsappbot1', m)
+                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), 'bot auto download', m)
             }
         }).catch(_ => _)
     }
 
     if (/^https?:\/\/.*youtu/i.test(m.text)) {
-        let results = await yts(url)
+        let results = await yts(m.text.split(/\n| /i)[0])
         let vid = results.all.find(video => video.seconds < 3600)
         if (!vid) return m.reply('Video/Audio Tidak ditemukan')
         let yt = false
@@ -100,7 +99,7 @@ handler.all = async function (m, { isPrems }) {
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${yt2.filesizeF}
 *Server y2mate:* ${usedServer}
-`.trim(), '© stikerin', 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
+`.trim(), 'bot auto download', 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
     }
 
 }
