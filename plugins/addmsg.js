@@ -14,5 +14,6 @@ Akses dengan ${usedPrefix}get${which} ${text}`)
 handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'sticker', 'gif'].map(v => 'add' + v + ' <teks>')
 handler.tags = ['database']
 handler.command = /^add(vn|msg|video|audio|img|stic?ker|gif)$/
+handler.owner = true
 
 module.exports = handler
