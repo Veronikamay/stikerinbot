@@ -18,7 +18,7 @@ handler.all = async function (m, { isPrems }) {
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.nowm, '', 'bot auto download', m)
+        await this.sendFile(m.chat, json.nowm, '', '© auto download bot', m)
     }
 
     if (/^.*cocofun/i.test(m.text)) {
@@ -27,7 +27,7 @@ handler.all = async function (m, { isPrems }) {
         let json = await res.json()
         await m.reply(wait)
         // m.reply(util.format(json))
-        await this.sendFile(m.chat, json.download, '', 'bot auto download', m)
+        await this.sendFile(m.chat, json.download, '', '© auto download bot', m)
     }
 
     if (/^.*(fb.watch|facebook.com)/i.test(m.text)) {
@@ -37,7 +37,7 @@ handler.all = async function (m, { isPrems }) {
             if (!json.status) throw json
             await m.reply(wait)
             // m.reply(util.format(json))
-            await this.sendFile(m.chat, json.data[1].url ? json.data[1].url : json.data[0].url, '', '© stikerin', m)
+            await this.sendFile(m.chat, json.data[1].url ? json.data[1].url : json.data[0].url, '', '© auto download bot', m)
         }).catch(_ => _)
     }
 
@@ -47,7 +47,7 @@ handler.all = async function (m, { isPrems }) {
             let json = JSON.parse(igdl)
             await m.reply(wait)
             for (let { downloadUrl, type } of json) {
-                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'bot autodownload semakin besar mbnya semakin bagus videonya', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
+                this.sendFile(m.chat, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), '© auto download bot', m, 0, { thumbnail: await (await fetch(downloadUrl)).buffer() })
             }
         }).catch(_ => _)
     }
@@ -59,7 +59,7 @@ handler.all = async function (m, { isPrems }) {
             if (!json.status) return m.reply(eror)
             await m.reply(wait)
             m.reply(util.format(json))
-            await this.sendFile(m.chat, json.data.url, '', 'bot auto download', m)
+            await this.sendFile(m.chat, json.data.url, '', 'auto download bot', m)
         }).catch(_ => _)
     }
 
@@ -69,7 +69,7 @@ handler.all = async function (m, { isPrems }) {
             let json = JSON.parse(twit)
             await m.reply(wait)
             for (let { url } of json.data) {
-                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), 'bot auto download', m)
+                this.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), '© auto download bot *semakin besar mbnya semakin bagus videonya*', m)
             }
         }).catch(_ => _)
     }
