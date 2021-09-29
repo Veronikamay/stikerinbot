@@ -13,13 +13,13 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     await conn.sendButton(res.gid, `
 *${conn.user.name}* adalah bot whatsapp yang dibangun dengan Nodejs, *${conn.user.name}* diundang oleh @${m.sender.split`@`[0]}
     
-ketik *${usedPrefix}menu* untuk melihat daftar perintah`.trim(), '© stikerin', 'Menu', `${usedPrefix}?`, { contextInfo: { mentionedJid: [m.sender] } })
+ketik *${usedPrefix}menu* untuk melihat daftar perintah`.trim(), '♕Bot sky♕', 'Menu', `${usedPrefix}?`, { contextInfo: { mentionedJid: [m.sender] } })
 }
 handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['']
 
 handler.command = /^join$/i
-
-handler.premium = false
+handler.owner = true
+handler.premium = true
 
 module.exports = handler
