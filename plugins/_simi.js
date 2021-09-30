@@ -31,4 +31,6 @@ handler.before = async (m) => {
   }
   return true;
 };
+
+handler.group = true
 module.exports = handler;
