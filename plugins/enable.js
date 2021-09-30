@@ -215,8 +215,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       setting.jadibot = isEnable
       break
     case 'simi':
-      if (m.isGroup) {
-        global.dfail('private', m, conn)
+      if (!isOwner) {
+        global.dfail('owner', m, conn)
         throw false
 
       } else if (!(isAdmin || isOwner)) {
