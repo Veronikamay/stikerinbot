@@ -27,7 +27,7 @@ const defaultMenu = {
 
 
 *┌────*
-*│§ %name*
+*│ ➣ %name*
 *│* Tersisa *%limit Limit*
 *│ %totalexp* XP secara Total
 *├────*
@@ -43,7 +43,7 @@ const defaultMenu = {
 *↓MENU↓*
 %readmore`.trimStart(),
   header: '*──° %category °──*',
-  body: '*§* %cmd %islimit %isPremium',
+  body: '*§➣* %cmd %islimit %isPremium',
   footer: '*─────*\n',
   after: `
 ♕Bot sky♕
