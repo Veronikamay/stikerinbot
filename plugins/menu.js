@@ -25,8 +25,9 @@ let tags = {
 const defaultMenu = {
   before: `
 
-➣ %name*
+
 *┌────*
+*│§ %name*
 *│* Tersisa *%limit Limit*
 *│ %totalexp* XP secara Total
 *├────*
@@ -39,10 +40,10 @@ const defaultMenu = {
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
 *└────*
-*☛MENU☚*
+*↓MENU↓*
 %readmore`.trimStart(),
   header: '*──° %category °──*',
-  body: '*➣* %cmd %islimit %isPremium',
+  body: '*§* %cmd %islimit %isPremium',
   footer: '*─────*\n',
   after: `
 ♕Bot sky♕
