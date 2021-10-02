@@ -28,8 +28,8 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-global.packname = '@botstiker\nfitur ini diluar tanggung admin\nbila disalah gunakan'
-global.author = 'ambil aja dan jangan lupa\njoin channel telegram\nhttps://t.me/whatsappbot1'
+global.packname = '©botstiker\nfitur ini diluar\ntanggung jawab pengembang\nbila disalah gunakan'
+global.author = 'silahkan pakai\ndan simpan stiker.\njangan lupa join\nchannel telegram\nhttps://t.me/whatsappbot1'
 
 global.wait = '_*tunggu..*_'
 global.eror = '_*coba perintah lain beb*_'
