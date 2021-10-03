@@ -29,7 +29,7 @@ const defaultMenu = {
 *┌────*
 *│ ➣ %name*
 *│* Tersisa *%limit Limit*
-*│ %totalexp* XP secara Total
+*│ ∞ XP secara Total
 *├────*
 *│* Hari: %week %weton
 *│* Tanggal: %date
