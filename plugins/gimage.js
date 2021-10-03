@@ -13,8 +13,9 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 handler.help = ['gimage <pencarian>', 'image <pencarian>']
 handler.tags = ['internet']
 handler.command = /^(g?image)$/i
-
+handler.premium = true
 module.exports = handler
+
 
 function pickRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)]
