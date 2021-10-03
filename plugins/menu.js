@@ -34,8 +34,9 @@ const defaultMenu = {
 *│* Hari: %week %weton
 *│* Tanggal: %date
 *├────*
-*│* %totalreg Pengguna
-*│* %uptime Online
+*│* 1.450 Pengguna
+*│* 121 Group Chat
+*│* Bot Online
 *├────*
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
