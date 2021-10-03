@@ -29,11 +29,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await delay(1500)
     }
     m.reply('_➢Proses Selesai Silahkan Beri Perintah Baru_')
-    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
-    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
-    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
-    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
-j
 }
 handler.help = ['stikertele <url>']
 handler.tags = ['sticker']
