@@ -12,7 +12,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let json = await gas.json()
     m.reply(`*Total stiker:* ${json.result.stickers.length}
 *Estimasi selesai:* ${json.result.stickers.length * 1.5} detik
-
 ➢Tunggu Hingga Selesai
 ➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
 
@@ -31,8 +30,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
     m.reply('_➢Proses Selesai Silahkan Beri Perintah Baru_')
     m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
-
-_')
+    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
+    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
+    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
+j
 }
 handler.help = ['stikertele <url>']
 handler.tags = ['sticker']
