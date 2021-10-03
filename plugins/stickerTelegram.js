@@ -12,9 +12,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let json = await gas.json()
     m.reply(`*Total stiker:* ${json.result.stickers.length}
 *Estimasi selesai:* ${json.result.stickers.length * 1.5} detik
-*Dilarang Memberikan Perintah Baru*
-*Tunggu Hingga Selesai Baru Beri Perintah Baru Pada Bot*
-*Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1*`.trim())
+
+➢Tunggu Hingga Selesai
+➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
 
     for (let i = 0; i < json.result.stickers.length; i++) {
         let fileId = json.result.stickers[i].thumb.file_id
@@ -29,7 +29,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await conn.sendMessage(m.chat, stiker, MessageType.sticker)
         await delay(1500)
     }
-    m.reply('_*Proses Selesai Silahkan Beri Perintah Baru*_')
+    m.reply('_➢Proses Selesai Silahkan Beri Perintah Baru_')
+    m.reply('_➢Support Bot Dengan Subcribe Channel Telegram https://t.me/whatsappbot1`.trim())
+
+_')
 }
 handler.help = ['stikertele <url>']
 handler.tags = ['sticker']
