@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
 }
 handler.help = ['caristiker <pencarian>']
-handler.tags = ['sticker']
+handler.tags = ['sticker','download']
 handler.command = /^caristiker$/i
 
 handler.limit = false
