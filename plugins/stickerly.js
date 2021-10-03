@@ -23,11 +23,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     m.reply('_*Selesai*_')
 
 }
-handler.help = ['stikerly <pencarian>']
+handler.help = ['caristiker <pencarian>']
 handler.tags = ['sticker']
-handler.command = /^(stic?kerly)$/i
+handler.command = /^caristiker$/i
 
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
