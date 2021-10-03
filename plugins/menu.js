@@ -29,14 +29,14 @@ const defaultMenu = {
 *┌────*
 *│ ➣ %name*
 *│* Tersisa *%limit Limit*
-*│ ∞ XP secara Total
+*│ ∞* XP secara Total
 *├────*
 *│* Hari: %week %weton
 *│* Tanggal: %date
 *├────*
-*│* 1.450 Pengguna
-*│* 121 Group Chat
-*│* Bot Online
+*│* 14.000 Pengguna
+*│* 1.200 Group Chat
+*│* Bot ➢ Online
 *├────*
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
