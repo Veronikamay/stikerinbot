@@ -458,7 +458,7 @@ ketik *.on delete* untuk mematikan pesan ini
         break
     }
     user.call += 1
-    await this.reply(from, `Jika kamu menelepon lebih dari 2 kali, kamu akan diblokir. bila ingin buka blokir chat owner wa.me/6285155333010 (melalui chat saja gausah nelfon owner atau akan diblokir juga).\n\n${user.call} / 2`, null)
+    await this.reply(from, `Jika kamu menelepon lebih dari 2 kali, kamu akan diblokir otomatis.\nBuka Blokir: https://bit.ly/3Be0yZE\n\n${user.call} / 2`, null)
     if (user.call == 2) {
       await this.blockUser(from, 'add')
       user.call = 0
