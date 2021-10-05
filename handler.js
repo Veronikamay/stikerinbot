@@ -382,8 +382,8 @@ module.exports = {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
             // let pp = './src/avatar_contact.png'
-            let pp = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
-            let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+            let pp = 'https://i.ibb.co/cv0DJws/photo-2021-09-22-22-31-41.jpg'
+            let ppgc = 'https://i.ibb.co/cv0DJws/photo-2021-09-22-22-31-41.jpg'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
@@ -458,8 +458,8 @@ ketik *.on delete* untuk mematikan pesan ini
         break
     }
     user.call += 1
-    await this.reply(from, `Jika kamu menelepon lebih dari 5, kamu akan diblokir.\n\n${user.call} / 5`, null)
-    if (user.call == 5) {
+    await this.reply(from, `Jika kamu menelepon lebih dari 2 kali, kamu akan diblokir. bila ingin buka blokir chat owner wa.me/6285155333010 (melalui chat saja gausah nelfon owner atau akan diblokir juga).\n\n${user.call} / 2`, null)
+    if (user.call == 2) {
       await this.blockUser(from, 'add')
       user.call = 0
     }
