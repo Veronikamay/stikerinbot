@@ -47,8 +47,8 @@ RAM: ${format(os.totalmem() - os.freemem())} / ${format(os.totalmem())}
 `.trim()
   m.reply(txt)
 }
-handler.help = ['ping']
+handler.help = ['speed']
 handler.tags = ['info']
 
-handler.command = /^(ping|speed)$/i
+handler.command = /^speed$/i
 module.exports = handler
