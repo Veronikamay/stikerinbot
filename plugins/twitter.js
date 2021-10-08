@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   twitter(args[0]).then(async res => {
     let twit = JSON.stringify(res)
     let json = JSON.parse(twit)
-    
+    let pesan = json.data.map((v) => ``).join(' ')
     m.reply(pesan)
     for (let { url } of json.data)
       conn.sendFile(m.chat, url, 'ig' + (/mp4/i.test(url) ? '.mp4' : '.jpg'), ``, null, false, { thumbnail: Buffer.alloc(0) })
