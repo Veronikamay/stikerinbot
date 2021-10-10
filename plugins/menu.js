@@ -24,16 +24,11 @@ const defaultMenu = {
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
 *└────*
-bila menu tidak muncul
-atau kamu menggunakan
-wa mod silahkan ketik
-_#all_
 %readmore`.trimStart(),
   header: '*──° %category °──*',
   body: '➣ %cmd %islimit %isPremium',
   footer: '*─────*\n',
   after: `
-♕Bot sky♕
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -197,8 +192,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
-          "buttonText": "Klik Disini",
+          "description": "silahkan ketik #all bila\ntombol tidak muncul",
+          "buttonText": "MENU",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
@@ -389,7 +384,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/e750471403ca953850c48.jpg")).buffer(), text.trim(), 'beri jeda bot 6 detik', 'Pemilik Bot', `${_p}owner`, 'Menu', `${_p}menu`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/e750471403ca953850c48.jpg")).buffer(), text.trim(), 'beri jeda bot 6 detik', 'Pemilik Bot', `${_p} owner`, 'Menu', `${_p} all`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
