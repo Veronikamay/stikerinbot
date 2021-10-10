@@ -28,11 +28,11 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-global.packname = '©botstiker\nfitur ini diluar\ntanggung jawab\npengembang\nbila disalah gunakan'
-global.author = 'silahkan pakai\ndan simpan stiker.\njangan lupa join\nchannel telegram\nhttps://t.me/whatsappbot1\nUntuk Info\nSeputar Bot'
+global.packname = '©botstiker'
+global.author = 'https://t.me/whatsappbot1'
 
-global.wait = '_*tunggu..*_'
-global.eror = '_*coba perintah lain beb*_'
+global.wait = '_*tunggu ya sayang💕..*_'
+global.eror = '_*coba perintah lain sayang maaf ya😖*_'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 global.multiplier = 69 // Semakin tinggi, semakin sulit naik level
