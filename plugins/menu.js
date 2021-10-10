@@ -199,93 +199,93 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `*Semua Perintah*`,
+                  "title": `𝙎𝙚𝙢𝙪𝙖 𝙋𝙚𝙧𝙞𝙣𝙩𝙖𝙝`,
                   "description": "menampilkan semua fitur",
                   "rowId": `${_p}? all`
                 }, {
-                  "title": "*Game*",
+                  "title": "𝙂𝙖𝙢𝙚",
                   "description": "menampilkan fitur game",
                   "rowId": `${_p}? game`
 
                 }, {
-                  "title": "*XP*",
+                  "title": "𝙓𝙋",
                   "description": "untuk tukar dengan limit",
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "*Stiker*",
+                  "title": "𝙎𝙩𝙞𝙠𝙚𝙧",
                   "description": "menampilkan fitur stiker",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "*Kerang Ajaib*",
+                  "title": "𝙆𝙚𝙧𝙖𝙣𝙜 𝘼𝙟𝙖𝙞𝙗",
                   "description": "bertanya padanya",
                   "rowId": `${_p}? kerangajaib`
                 }, {
-                  "title": "*Quotes*",
+                  "title": "𝙌𝙪𝙤𝙩𝙚𝙨",
                   "description": "kumpulan kata kata bijak",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "*Admin*",
+                  "title": "𝘼𝙙𝙢𝙞𝙣",
                   "description": "fitur khusus untuk admin group",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "*Grup*",
+                  "title": "𝙂𝙧𝙪𝙥",
                   "description": "fitur yang hanya bisa digunakan digroup",
                   "rowId": `${_p}? grup`
                 }, {
-                  "title": "*Premium*",
+                  "title": "𝙋𝙧𝙚𝙢𝙞𝙪𝙢",
                   "description": "menampilkan list premium",
                   "rowId": `${_p}? premium`
                 }, {
-                  "title": "*Internet*",
+                  "title": "𝙄𝙣𝙩𝙚𝙧𝙣𝙚𝙩",
                   "description": "fitur pencarian",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "*Anonymous*",
+                  "title": "𝘼𝙣𝙤𝙣𝙮𝙢𝙤𝙪𝙨",
                   "description": "mau chat dengan seseorang?",
                   "rowId": `${_p}? anonymous`
                 }, {
-                  "title": "*Nulis & Logo*",
+                  "title": "𝙉𝙪𝙡𝙞𝙨 & 𝙇𝙤𝙜𝙤",
                   "description": "fitur bagi pemalas",
                   "rowId": `${_p}? nulis`
                 }, {
-                  "title": "*Downloader*",
+                  "title": "𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧",
                   "description": "download dari ig,yt,tiktok, dll",
                   "rowId": `${_p}? downloader`
                 }, {
-                  "title": "*Tools*",
+                  "title": "𝙏𝙤𝙤𝙡𝙨",
                   "description": "fitur alat serbaguna",
                   "rowId": `${_p}? tools`
                 }, {
-                  "title": "*Fun*",
+                  "title": "𝙁𝙪𝙣",
                   "description": "bermainlah bersamaku",
                   "rowId": `${_p}? fun`
                 }, {
-                  "title": "*Database*",
+                  "title": "𝘿𝙖𝙩𝙖𝙗𝙖𝙨𝙚",
                   "description": "menyimpan data",
                   "rowId": `${_p}? database`
                 }, {
-                  "title": "*Vote & Absen*",
+                  "title": "𝙑𝙤𝙩𝙚 & 𝘼𝙗𝙨𝙚𝙣",
                   "description": "fitur untuk absen",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "*Al-Qur\'an*",
+                  "title": "*𝘼𝙡-𝙌𝙪𝙧}'𝙖𝙣*",
                   "description": "jangan lupa ngaji",
                   "rowId": `${_p}? quran`
                 }, {
-                  "title": "*Pengubah Suara*",
+                  "title": "𝙋𝙚𝙣𝙜𝙪𝙗𝙖𝙝 𝙎𝙪𝙖𝙧𝙖",
                   "description": "ubah vnmu menjadi suara aneh dan lucu",
                   "rowId": `${_p}? audio`
                 }, {
-                  "title": "*Jadi Bot*",
+                  "title": "𝙅𝙖𝙙𝙞 𝘽𝙤𝙩",
                   "description": "pingin punya bot seperti ini?",
                   "rowId": `${_p}? jadibot`
                 }, {
-                  "title": "*TOPUP ML & FF*",
+                  "title": "TOᑭᑌᑭ ᗰᒪ & ᖴᖴ",
                   "description": "tertarik beli, gak tertarik gausah komen",
                   "rowId": `${_p}? topupgame`
                 }, {
-                  "title": "*Info*",
+                  "title": "*𝙄𝙣𝙛𝙤*",
                   "description": "tentang bot",
                   "rowId": `${_p}? info`
                 }, {
@@ -293,7 +293,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "*Owner*",
+                  "title": "OᗯᑎEᖇ",
                   "description": "fitur khusus owner bot",
                   "rowId": `${_p}? owner`
                 }
