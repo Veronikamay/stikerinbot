@@ -37,6 +37,7 @@ const defaultMenu = {
 *│* 14.000 Pengguna
 *│* 1.200 Group Chat
 *│* Bot ➢ Online
+*│* Online : *%uptime*
 *├────*
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
