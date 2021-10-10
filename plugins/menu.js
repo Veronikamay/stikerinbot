@@ -269,7 +269,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "fitur untuk absen",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "*𝘼𝙡-𝙌𝙪𝙧}'𝙖𝙣*",
+                  "title": "𝘼𝙡-𝙌𝙪𝙧\'𝙖𝙣",
                   "description": "jangan lupa ngaji",
                   "rowId": `${_p}? quran`
                 }, {
@@ -281,19 +281,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "pingin punya bot seperti ini?",
                   "rowId": `${_p}? jadibot`
                 }, {
-                  "title": "TOᑭᑌᑭ ᗰᒪ & ᖴᖴ",
+                  "title": "𝗗𝗜𝗔𝗠𝗢𝗡𝗗 𝗠𝗟 & 𝗙𝗙",
                   "description": "tertarik beli, gak tertarik gausah komen",
                   "rowId": `${_p}? topupgame`
                 }, {
-                  "title": "*𝙄𝙣𝙛𝙤*",
+                  "title": "𝙄𝙣𝙛𝙤",
                   "description": "tentang bot",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "*Tanpa Kategori*",
+                  "title": "𝙏𝙖𝙣𝙥𝙖 𝙆𝙖𝙩𝙚𝙜𝙤𝙧𝙞",
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "OᗯᑎEᖇ",
+                  "title": "𝗢𝗪𝗡𝗘𝗥",
                   "description": "fitur khusus owner bot",
                   "rowId": `${_p}? owner`
                 }
