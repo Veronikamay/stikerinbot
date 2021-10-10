@@ -192,7 +192,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "silahkan ketik #all bila\ntombol tidak muncul",
+          "description": "©botsky",
           "buttonText": "MENU",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -218,75 +218,75 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": `${_p}? stiker`
                 }, {
                   "title": "Kerang Ajaib",
-                  "description": "",
+                  "description": "bertanya padanya",
                   "rowId": `${_p}? kerangajaib`
                 }, {
                   "title": "Quotes",
-                  "description": "",
+                  "description": "kumpulan kata kata bijak",
                   "rowId": `${_p}? quotes`
                 }, {
                   "title": "Admin",
-                  "description": "",
+                  "description": "fitur khusus untuk admin group",
                   "rowId": `${_p}? admin`
                 }, {
                   "title": "Grup",
-                  "description": "",
+                  "description": "fitur yang hanya bisa digunakan digroup",
                   "rowId": `${_p}? grup`
                 }, {
                   "title": "Premium",
-                  "description": "",
+                  "description": "menampilkan list premium",
                   "rowId": `${_p}? premium`
                 }, {
                   "title": "Internet",
-                  "description": "",
+                  "description": "fitur pencarian",
                   "rowId": `${_p}? internet`
                 }, {
                   "title": "Anonymous",
-                  "description": "",
+                  "description": "mau chat dengan seseorang?",
                   "rowId": `${_p}? anonymous`
                 }, {
                   "title": "Nulis & Logo",
-                  "description": "",
+                  "description": "fitur bagi pemalas",
                   "rowId": `${_p}? nulis`
                 }, {
                   "title": "Downloader",
-                  "description": "",
+                  "description": "download dari ig,yt,tiktok, dll",
                   "rowId": `${_p}? downloader`
                 }, {
                   "title": "Tools",
-                  "description": "",
+                  "description": "fitur alat serbaguna",
                   "rowId": `${_p}? tools`
                 }, {
                   "title": "Fun",
-                  "description": "",
+                  "description": "bermainlah bersamaku",
                   "rowId": `${_p}? fun`
                 }, {
                   "title": "Database",
-                  "description": "",
+                  "description": "menyimpan data",
                   "rowId": `${_p}? database`
                 }, {
                   "title": "Vote & Absen",
-                  "description": "",
+                  "description": "fitur untuk absen",
                   "rowId": `${_p}? vote`
                 }, {
                   "title": "Al-Qur\'an",
-                  "description": "",
+                  "description": "jangan lupa ngaji",
                   "rowId": `${_p}? quran`
                 }, {
                   "title": "Pengubah Suara",
-                  "description": "",
+                  "description": "ubah vnmu menjadi suara aneh dan lucu",
                   "rowId": `${_p}? audio`
                 }, {
                   "title": "Jadi Bot",
-                  "description": "",
+                  "description": "pingin punya bot seperti ini?",
                   "rowId": `${_p}? jadibot`
                 }, {
                   "title": "TOPUP ML & FF",
-                  "description": "",
+                  "description": "silahkan ketik #topupml/ff",
                   "rowId": `${_p}? topupgame`
                 }, {
                   "title": "Info",
-                  "description": "",
+                  "description": "tentang bot",
                   "rowId": `${_p}? info`
                 }, {
                   "title": "Tanpa Kategori",
@@ -294,7 +294,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": `${_p}? tanpakategori`
                 }, {
                   "title": "Owner",
-                  "description": "",
+                  "description": "fitur khusus owner bot",
                   "rowId": `${_p}? owner`
                 }
               ]
