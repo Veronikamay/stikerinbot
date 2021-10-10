@@ -34,7 +34,7 @@ const defaultMenu = {
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'topupgame', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -121,7 +121,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'jadibot': 'Jadi Bot'
   }
   if (teks == 'topupgame') tags = {
-    'topupgame': '🎮ML&FF🎮'
+    'topupgame': 'TOPUP ML & FF'
   }
   if (teks == 'info') tags = {
     'info': 'Info'
@@ -199,101 +199,101 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `Semua Perintah`,
+                  "title": `*Semua Perintah*`,
                   "description": "menampilkan semua fitur",
                   "rowId": `${_p}? all`
                 }, {
-                  "title": "Game",
+                  "title": "*Game*",
                   "description": "menampilkan fitur game",
                   "rowId": `${_p}? game`
 
                 }, {
-                  "title": "XP",
-                  "description": "",
+                  "title": "*XP*",
+                  "description": "untuk tukar dengan limit",
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "Stiker",
+                  "title": "*Stiker*",
                   "description": "menampilkan fitur stiker",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "Kerang Ajaib",
+                  "title": "*Kerang Ajaib*",
                   "description": "bertanya padanya",
                   "rowId": `${_p}? kerangajaib`
                 }, {
-                  "title": "Quotes",
+                  "title": "*Quotes*",
                   "description": "kumpulan kata kata bijak",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "Admin",
+                  "title": "*Admin*",
                   "description": "fitur khusus untuk admin group",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "Grup",
+                  "title": "*Grup*",
                   "description": "fitur yang hanya bisa digunakan digroup",
                   "rowId": `${_p}? grup`
                 }, {
-                  "title": "Premium",
+                  "title": "*Premium*",
                   "description": "menampilkan list premium",
                   "rowId": `${_p}? premium`
                 }, {
-                  "title": "Internet",
+                  "title": "*Internet*",
                   "description": "fitur pencarian",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "Anonymous",
+                  "title": "*Anonymous*",
                   "description": "mau chat dengan seseorang?",
                   "rowId": `${_p}? anonymous`
                 }, {
-                  "title": "Nulis & Logo",
+                  "title": "*Nulis & Logo*",
                   "description": "fitur bagi pemalas",
                   "rowId": `${_p}? nulis`
                 }, {
-                  "title": "Downloader",
+                  "title": "*Downloader*",
                   "description": "download dari ig,yt,tiktok, dll",
                   "rowId": `${_p}? downloader`
                 }, {
-                  "title": "Tools",
+                  "title": "*Tools*",
                   "description": "fitur alat serbaguna",
                   "rowId": `${_p}? tools`
                 }, {
-                  "title": "Fun",
+                  "title": "*Fun*",
                   "description": "bermainlah bersamaku",
                   "rowId": `${_p}? fun`
                 }, {
-                  "title": "Database",
+                  "title": "*Database*",
                   "description": "menyimpan data",
                   "rowId": `${_p}? database`
                 }, {
-                  "title": "Vote & Absen",
+                  "title": "*Vote & Absen*",
                   "description": "fitur untuk absen",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "Al-Qur\'an",
+                  "title": "*Al-Qur\'an*",
                   "description": "jangan lupa ngaji",
                   "rowId": `${_p}? quran`
                 }, {
-                  "title": "Pengubah Suara",
+                  "title": "*Pengubah Suara*",
                   "description": "ubah vnmu menjadi suara aneh dan lucu",
                   "rowId": `${_p}? audio`
                 }, {
-                  "title": "Jadi Bot",
+                  "title": "*Jadi Bot*",
                   "description": "pingin punya bot seperti ini?",
                   "rowId": `${_p}? jadibot`
                 }, {
-                  "title": "TOPUP ML & FF",
-                  "description": "silahkan ketik #topupml/ff",
+                  "title": "*TOPUP ML & FF*",
+                  "description": "tertarik beli, gak tertarik gausah komen",
                   "rowId": `${_p}? topupgame`
                 }, {
-                  "title": "Info",
+                  "title": "*Info*",
                   "description": "tentang bot",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "Tanpa Kategori",
+                  "title": "*Tanpa Kategori*",
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "Owner",
+                  "title": "*Owner*",
                   "description": "fitur khusus owner bot",
                   "rowId": `${_p}? owner`
                 }
