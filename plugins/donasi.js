@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch(fla + 'donasi')).buffer(), `
 ┌〔 Donasi • Emoney 〕
-├ https://saweria.co/ariffb
-├ https://trakteer.id/ariffb/tip
+├ Ovo, Dana, Gopay
+├ *085155333010*
 └────
-`.trim(), '© stikerin', 'Donasi', '.donasi', m)
+`.trim(), 'yang baik dikasih pap tt ama dino', 'Donasi', '.donasi', m)
 handler.help = ['donasi']
 handler.tags = ['info']
 handler.command = /^dona(te|si)$/i
