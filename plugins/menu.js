@@ -18,8 +18,8 @@ const defaultMenu = {
 *├────*
 *│* 14.000 Pengguna
 *│* 1.200 Group Chat
-*│* Bot ➢ Online
-*│* Online : *%uptime*
+*│* Bot Online Sejak:
+*│* *%uptime* Yang Lalu
 *├────*
 *│* Info Seputar Bot
 *│* https://t.me/whatsappbot1
