@@ -29,7 +29,7 @@ SEBELUM MELUNASI KURANGNYA.
 terimakasih sudah percaya
 dan menggunakan jasa kami
 ╚════════╝
-`.trim(), 'silahkan isi format', 'Format', '.format', m)
+`.trim(), 'silahkan isi format', 'Format', '$format', m)
 handler.help = ['bayar']
 handler.tags = ['topupgame']
 handler.command = /^bayar$/i
