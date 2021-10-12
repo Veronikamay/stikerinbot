@@ -21,7 +21,7 @@ let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (awa
 ║Starlight⭐️+ 298.750
 ╚════♕
 `.trim(), 'Beli syukur. ga beli gausah komen', 'Cara Bayar', '.bayar', m)
-handler.help = ['topupff']
+handler.help = ['topupml']
 handler.tags = ['topupgame']
 handler.command = /^topupml$/i
 
