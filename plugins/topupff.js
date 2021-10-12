@@ -25,7 +25,7 @@ LIST RESELLER TOP UP FF
 ║MEMBER MINGGUAN  28.410
 ║MEMBER BULANAN  112.750.
 ╚════♕
-`.trim(), 'Beli syukur. ga beli gausah komen', 'Cara Bayar', '.bayar', m)
+`.trim(), 'beli syukur ga beli gausah komen.\nsilahkan klik tombol bayar dibawah atau ketik #bayar bila tombol tak muncul', 'Cara Bayar', '.bayar', m)
 handler.help = ['topupff']
 handler.tags = ['topupgame']
 handler.command = /^topupff$/i
