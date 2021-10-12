@@ -30,8 +30,8 @@ terimakasih sudah percaya
 dan menggunakan jasa kami
 ╚════════╝
 `.trim(), 'silahkan isi format', 'Format', '.format', m)
-handler.help = ['topupff']
+handler.help = ['bayar']
 handler.tags = ['topupgame']
-handler.command = /^topupml$/i
+handler.command = /^bayar$/i
 
 module.exports = handler
