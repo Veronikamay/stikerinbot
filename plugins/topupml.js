@@ -1,4 +1,5 @@
-let handler = async m => m.reply(`
+let fetch = require('node-fetch')
+let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/36a23608fc700652e1974.jpg")).buffer(), `
 💎MOBILE LEGEND VIA ID💎
 ╔════♕
 ║➢86💎 20.200
@@ -19,10 +20,8 @@ let handler = async m => m.reply(`
 ║Starlight⭐️ 135.410
 ║Starlight⭐️+ 298.750
 ╚════♕
-untuk info pembayaran silahkan tulis #bayar
-untuk format pembayaran silahkan tulis #format
-`.trim()) // Tambah sendiri kalo mau
-handler.help = ['topupml']
+`.trim(), 'Beli syukur. ga beli gausah komen', 'Cara Bayar', '.bayar', m)
+handler.help = ['topupff']
 handler.tags = ['topupgame']
 handler.command = /^topupml$/i
 
