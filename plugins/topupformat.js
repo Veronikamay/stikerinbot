@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (awa
 ➣ID ( SERVER ) :  
 ➣Jumlah DM :    
 ➣Sisa DM :
-`.trim(), 'silahkan buat format seperti\n dan isi formatnya lalu kirim\nke admin', 'Admin', '.owner', m)
+`.trim(), 'silahkan buat format seperti ini\nlalu isi formatnya trus kirimdeh\nke admin.\nklik tombol dibawah atau\nketik #admin bila tombol tak muncul', 'Admin', '.owner', m)
 handler.help = ['format']
 handler.tags = ['topupgame']
 handler.command = /^format$/i
