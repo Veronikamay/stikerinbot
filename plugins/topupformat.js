@@ -35,17 +35,16 @@ let handler = async (m, { conn }) => {
     }
   })
   let old = performance.now()
-  await m.reply('*SILAHKAN UNTUK DIISI*\n*DAN KIRIMKAN KEPADA ADMIN*\n*BESERTA BUKTI PEMBAYARANNYA*\n*AGAR LANGSUNG DIPROSES*\n*OLEH ADMIN*')
+  await m.reply('SILAHKAN UNTUK DIISI DAN KIRIMKAN KEPADA ADMIN BESERTA BUKTI PEMBAYARANNYA AGAR LANGSUNG DIPROSES OLEH ADMIN')
   let neww = performance.now()
   let speed = neww - old
   let txt = `
-╠ FORMAT ORDER FF ╣  
+*╠ FORMAT ORDER FF ╣8  
 ➣Nick :  
 ➣ID  :  
 ➣Jumlah DM :  
-➣Sisa DM
- 
-╠ FORMAT ORDER ML ╣
+➣Sisa DM :
+*╠ FORMAT ORDER ML ╣*
 ➣Nick :  
 ➣ID ( SERVER ) :  
 ➣Jumlah DM :    
