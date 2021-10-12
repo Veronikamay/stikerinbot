@@ -1,4 +1,5 @@
-let handler = async m => m.reply(`
+let fetch = require('node-fetch')
+let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/de13b189f84ed5166fdc9.jpg")).buffer(), `
 LIST RESELLER TOP UP FF
 ꧁FREE FIRE  VIA ID꧂
 ╔════♕
@@ -24,8 +25,7 @@ LIST RESELLER TOP UP FF
 ║MEMBER MINGGUAN  28.410
 ║MEMBER BULANAN  112.750.
 ╚════♕
-untuk info pembayaran silahkan tulis #bayar
-`.trim()) // Tambah sendiri kalo mau
+`.trim(), 'Beli syukur. ga beli gausah komen', 'Cara Bayar', '.bayar', m)
 handler.help = ['topupff']
 handler.tags = ['topupgame']
 handler.command = /^topupff$/i
