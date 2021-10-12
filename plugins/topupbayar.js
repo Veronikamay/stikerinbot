@@ -1,4 +1,5 @@
-let handler = async m => m.reply(`
+let fetch = require('node-fetch')
+let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/cb4ea582a4951570ac6b6.jpg")).buffer(), `
 ╔♕ PEMBAYARAN ♕
 ║ Silahkan bayar melalui 
 ║ Gopay/OVO/Dana ke no :
@@ -28,10 +29,9 @@ SEBELUM MELUNASI KURANGNYA.
 terimakasih sudah percaya
 dan menggunakan jasa kami
 ╚════════╝
-untuk format pembayaran silahkan tulis #format
-`.trim()) // Tambah sendiri kalo mau
-handler.help = ['bayar']
+`.trim(), 'silahkan isi format', 'Format', '.format', m)
+handler.help = ['topupff']
 handler.tags = ['topupgame']
-handler.command = /^bayar$/i
+handler.command = /^topupml$/i
 
 module.exports = handler
