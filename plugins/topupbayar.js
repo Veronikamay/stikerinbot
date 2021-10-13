@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/cb4ea582a4951570ac6b6.jpg")).buffer(), `
+let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/de1a1ed40ad2e546eb7d1.jpg")).buffer(), `
 ╔♕ PEMBAYARAN ♕
 ║ Silahkan bayar melalui 
 ║ Gopay/OVO/Dana ke no :
@@ -29,9 +29,10 @@ SEBELUM MELUNASI KURANGNYA.
 terimakasih sudah percaya
 dan menggunakan jasa kami
 ╚════════╝
-`.trim(), 'silahkan isi format, klik tomblo isi format dibawah atau ketik #format bila tombol tidak muncul/format tidak muncul', 'Isi Format', '.format', m)
+`.trim(), 'silahkan isi format, klik tomblo isi format dibawah atau ketik #format bila tombol tidak muncul/format tidak muncul', 'FORMAT', '.format', m)
 handler.help = ['bayar']
 handler.tags = ['topupgame']
 handler.command = /^bayar$/i
+handler.owner = false
 
 module.exports = handler
