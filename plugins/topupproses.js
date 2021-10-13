@@ -7,8 +7,7 @@ Perlu diketahui:
 2.Ini diamond resmi bukan diamond merah jadi anti band atau anti minus diamond,
 3.Toko buka dari 08:00-20:00, Pembayaran/transaksi diatas jam 20:00 maka akan diproses dikemudian hari.
 
-Terimakasih sudah menjadi bagian dari kami, Semoga hari ini menjadi hari yang indah bagi kita Semua. :)
-`.trim(), 'beli syukur ga beli gausah komen.\nsilahkan klik tombol bayar dibawah atau ketik #bayar bila tombol tak muncul', 'Cara Bayar', '.bayar', m)
+`.trim(), 'Terimakasih sudah menjadi bagian dari kami, Semoga hari ini menjadi hari yang indah bagi kita Semua. :)', 'Menu', '.menu', m)
 handler.help = ['proses']
 handler.tags = ['topupgame']
 handler.command = /^proses$/i
