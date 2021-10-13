@@ -9,7 +9,8 @@ Perlu diketahui:
 
 3. Toko buka dari 08:00-20:00, Pembayaran/transaksi diatas jam 20:00 maka akan diproses dikemudian hari.
 
-`.trim(), 'Terimakasih sudah menjadi bagian dari kami, Semoga hari ini menjadi hari yang indah bagi kita Semua. :)', 'Menu', '.menu', m)
+Terimakasih sudah menjadi bagian dari kami, Semoga hari ini menjadi hari yang indah bagi kita Semua. :)
+`.trim())
 handler.help = ['proses']
 handler.tags = ['topupgame']
 handler.command = /^proses$/i
