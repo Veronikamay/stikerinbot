@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn }) => await conn.sendButtonLoc(m.chat, await (await fetch("https://telegra.ph/file/da27f5c948bedbe4763dc.jpg")).buffer(), `
+let handler = async (m, { conn }) => await conn.sendLoc(m.chat, await (await fetch("https://telegra.ph/file/da27f5c948bedbe4763dc.jpg")).buffer(), `
 Sedang diproses siahkan ditunggu.
 
 Perlu diketahui:
