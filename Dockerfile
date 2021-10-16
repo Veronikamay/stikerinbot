@@ -18,4 +18,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", ".", "--restrict"]`
+CMD ["node", ".", "--server"]`
