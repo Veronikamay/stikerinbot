@@ -8,9 +8,9 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
         return admins
     }
 
-    let pp = ''
+    let pp = './src/admin_group.jpg'
     try {
-        pp = 
+        pp = './src/admin_group.jpg'
     } catch (e) {
     } finally {
         let { isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, expired, descUpdate, stiker } = global.db.data.chats[m.chat]
@@ -19,19 +19,22 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
 
         if (text) return m.reply(msToDate(expired - new Date() * 1))
 
-        let caption = `Tag Admin\n
-*Pembuat Grup:*
+        let caption = `*TAG ADMIN*\n
+*Pembuat Grup:* 
 @${m.chat.split`-`[0]}
+
 *Admin Grup:*
 ${listAdmin}
 
+
 `.trim()
         let mentionedJid = groupAdmins.concat([`${m.chat.split`-`[0]}@s.whatsapp.net`])
+        conn.sendFile(m.key.remoteJid, pp, 'pp.jpg', caption, m, 0, { contextInfo: { mentionedJid } })
     }
 }
-handler.help = ['admingroup']
+handler.help = ['admin']
 handler.tags = ['group']
-handler.command = /^(group?admin|admin(gro?up|gc))$/i
+handler.command = /^admin$/i
 
 handler.group = true
 
