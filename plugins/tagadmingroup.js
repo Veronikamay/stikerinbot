@@ -25,7 +25,7 @@ ${listAdmin}
 
 `.trim()
         let mentionedJid = groupAdmins.concat([`${m.chat.split`-`[0]}@s.whatsapp.net`])
-        conn.sendFile(m.key.remoteJid, pp, 'pp.jpg', caption, null, 0, { contextInfo: { mentionedJid } })
+        conn.reply(m.key.remoteJid, caption, null, 0, { contextInfo: { mentionedJid } })
     }
 }
 handler.help = ['admin']
