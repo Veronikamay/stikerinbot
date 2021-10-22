@@ -20,7 +20,7 @@ ID: ${m.isGroup ? m.chat : m.sender}
 Nama Group: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
 
 `.trim(), null, { contextInfo: { mentionedJid: [m.sender] } })
-await conn.sendButton(m.chat, `*Link Terdeteksi!*${isBotAdmin ? '' : ''}${opts['restrict'] ? '' : '\n_dilarang kirim link group lain,_\n_selain link group lain diperbolehkan_\n_asal bukan link 19+!_\n_untuk download yt, ig, twitter, pinterest, dan fb_\n_silahkan gunakan perintah yang ada di #menu._'}`, '©ariffb ©fathur ©Athallah.⁩ ©Aniq⁩ ', 'Laporkan!', '.report ada yang ngirim link nih', m)
+await conn.sendButton(m.chat, `_*Link Terdeteksi!*_${isBotAdmin ? '' : ''}${opts['restrict'] ? '' : ''}`, '©ariffb ©fathur ©Athallah.⁩ ©Aniq⁩ ', 'Laporkan!', '.report ada yang ngirim link nih @alaika', m)
     if (global.opts['restrict']) {
       if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
     }
