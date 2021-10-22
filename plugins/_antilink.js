@@ -5,11 +5,6 @@ handler.before = async function (m, { isAdmin, isBotAdmin, command }) {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.db.data.chats[m.chat];
   let ValidLink = (m.text.includes('https://') || m.text.includes('http://'))
-  let teks = `*${command.toUpperCase()}!*\n\nDari : *@${m.sender.split`@`[0]}*\nID: ${m.isGroup ? m.chat : m.sender}\nNama Group: *${m.isGroup ? conn.getName(m.chat) : conn.getName(m.sender)}*\nPesan : ${text}\n`
-  conn.reply(global.owner[0] + '@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, {
-      contextInfo: {
-          mentionedJid: [m.sender] 
-      }      
   if (chat.antiLink && ValidLink && !isAdmin && !m.isBaileys && m.isGroup && !command) {
     let thisGroup = isBotAdmin ? `https://chat.whatsapp.com/${await conn.groupInviteCode(m.chat)}` : 0
     if (m.text.includes(thisGroup) && thisGroup != 0) throw false // jika link grup itu sendiri gak dikick
@@ -19,6 +14,15 @@ handler.before = async function (m, { isAdmin, isBotAdmin, command }) {
     }
   }
   return true
+}
+let handler = async(m, { conn, text }) => {
+    if (!text) throw 'Silahkan masukkan laporan'
+    if (text.length > 300) throw 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks!'
+    const laporan = `*「 REPORT 」*\nNomor : wa.me/${m.sender.split`@`[0]}\nPesan : ${text}`
+    for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid && v != '6281515860089@s.whatsapp.net'))
+    m.reply(laporan, jid)
+    m.reply(laporan, m.sender) // Mwehehehehe
+    m.reply('✔️Masalah telah di laporkan ke Owner Bot, laporan palsu/main2 tidak akan ditanggapi!')
 }
 
 module.exports = handler
