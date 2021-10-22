@@ -1,8 +1,7 @@
 let handler = m => m
 
-const isValidURL = (url) => {
-  return /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%.\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%\+.~#?&//=]*)/g.test(url);
-}
+const isValidURL = (url) => {return /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%.\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%\+.~#?&//=]*)/g.test(url);}
+
 
 handler.before = async function (m, { isAdmin, isBotAdmin, command }) {
   if (m.isBaileys && m.fromMe) return true
