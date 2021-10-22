@@ -22,8 +22,8 @@ LIST RESELLER TOP UP FF
 ║➢2000💎x Rp.287.000
 ║➢7290💎x Rp.929.500
 ╠════♕
-║MEMBER MINGGUAN  Rp.28.410
-║MEMBER BULANAN  Rp.112.750
+║MEMBER MINGGUAN  Rp.28.410.00
+║MEMBER BULANAN  Rp.112.750.00
 ╚════♕
 `.trim(), 'beli syukur ga beli gausah komen.\nsilahkan klik tombol bayar dibawah atau ketik #bayar bila tombol tak muncul', 'Cara Bayar', '.bayar', m)
 handler.help = ['topupff']
