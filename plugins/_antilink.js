@@ -20,7 +20,7 @@ ID: ${m.isGroup ? m.chat : m.sender}
 Nama Group: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
 
 `.trim(), null, { contextInfo: { mentionedJid: [m.sender] } })
-await conn.sendButton(m.chat, `_*Link Terdeteksi!*_${isBotAdmin ? '' : ''}${opts['restrict'] ? '' : ''}`, '©ariffb ©fathur ©Athallah.⁩ ©Aniq⁩ ', 'Laporkan!', '.report ada yang ngirim link nih @alaika', m)
+await conn.sendButton(m.chat, `_*Link Terdeteksi!*_${isBotAdmin ? '' : ''}${opts['restrict'] ? '' : ''}`, '©bot-whatsapp', 'Laporkan!', '.admin', m)
     if (global.opts['restrict']) {
       if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
     }
