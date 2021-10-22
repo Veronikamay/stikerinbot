@@ -13,11 +13,10 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
         pp = './src/admin_group.jpg'
     } catch (e) {
     } finally {
-        let { isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, expired, descUpdate, stiker } = global.db.data.chats[m.chat]
         const groupAdmins = getGroupAdmins(participants)
         let listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.split`@`[0]}`).join('\n')
 
-        if (text) return m.reply(msToDate(expired - new Date() * 1))
+        if (text) return m.reply,
 
         let caption = `*TAG ADMIN*\n
 *Pembuat Grup:* 
