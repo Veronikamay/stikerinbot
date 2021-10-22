@@ -17,7 +17,7 @@ Pelaku Pengirim Link @${m.sender.split`@`[0]}
 
 ID: ${m.isGroup ? m.chat : m.sender}
 
-Nama: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
+Nama Group: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
 
 `.trim(), null, { contextInfo: { mentionedJid: [m.sender] } })
   }
