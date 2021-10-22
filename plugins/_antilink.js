@@ -1,7 +1,8 @@
 let handler = m => m
 
-const isValidURL = (url) => {return /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%.\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%\+.~#?&//=]*)/g.test(url);}
-
+const isValidURL = (url) => {
+  return /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%.\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%\+.~#?&//=]*)/g.test(url);
+}
 
 handler.before = async function (m, { isAdmin, isBotAdmin, command }) {
   if (m.isBaileys && m.fromMe) return true
@@ -10,14 +11,20 @@ handler.before = async function (m, { isAdmin, isBotAdmin, command }) {
   if (chat.antiLink && ValidLink && !isAdmin && !m.isBaileys && m.isGroup && !command) {
     let thisGroup = isBotAdmin ? `https://chat.whatsapp.com/${await conn.groupInviteCode(m.chat)}` : 0
     if (m.text.includes(thisGroup) && thisGroup != 0) throw false // jika link grup itu sendiri gak dikick
-    let teks = `*${command.toUpperCase()}!*\n\nDari : *@${m.sender.split`@`[0]}*\nID: ${m.isGroup ? m.chat : m.sender}\nNama Group: *${m.isGroup ? conn.getName(m.chat) : conn.getName(m.sender)}*\nPesan : ${text}\n`
-    conn.reply(global.owner[0] + '@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, {
-        contextInfo: {
-            mentionedJid: [m.sender]
-        }
-    })
-    m.reply(`_Pesan terkirim kepemilik bot, jika ${command.toLowerCase()} hanya main-main tidak akan ditanggapi._`)
-}
+    await this.reply(global.owner[0] + '@s.whatsapp.net', `
+
+Pelaku pengirim troli @${m.sender.split`@`[0]}
+
+ID: ${m.isGroup ? m.chat : m.sender}
+
+Nama: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
+
+`.trim(), null, { contextInfo: { mentionedJid: [m.sender] } })
+await this.sendButon(m.chat, `*Link Grup Terdeteksi!*${isBotAdmin ? '' : '\n\nbukan admin jadi gabisa kick t_t'}\n\nKetik *.off antilink* untuk mematikan fitur ini${opts['restrict'] ? '' : '\nketik *#on restrict* supaya bisa kick'}`, '© stikerin', 'Matikan Antilink', ',0 antilink', m)
+    if (global.opts['restrict']) {
+      if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
+    }
+  }
   return true
 }
 
